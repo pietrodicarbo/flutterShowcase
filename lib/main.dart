@@ -34,7 +34,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  int _last = 0;
+  int _last = 1;
   int _current = 1;
 
   void _incrementCounter() {
@@ -67,9 +67,13 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text(
               'Clicks and Fibonacci:',
             ),
-            Text(
-              'Clicks: $_counter\nFibonacci: $_current',
-              style: Theme.of(context).textTheme.headlineMedium,
+            Container(
+              padding: EdgeInsets.all(10),
+              color: Colors.amber,
+              child: Text(
+                'Clicks: $_counter\nFibonacci: $_current',
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
             ),
             LinearProgressIndicator(
               value: _counter / 100,
