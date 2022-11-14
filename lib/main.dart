@@ -82,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             FloatingActionButton(
               onPressed: _reset,
-              tooltip: 'Rest',
+              tooltip: 'Reset',
               child: const Icon(Icons.delete_forever_sharp),
             ),
           ],

@@ -26,5 +26,7 @@ void main() {
     // Verify that our counter has incremented.
     expect(find.text('Clicks: 0\nFibonacci: 1'), findsNothing);
     expect(find.text('Clicks: 1\nFibonacci: 2'), findsOneWidget);
+    expect(find.byTooltip("Increment"), findsNWidgets(1));
+    expect(find.widgetWithText(Column, "Clicks and Fibonacci:"), findsNWidgets(1));
   });
 }
